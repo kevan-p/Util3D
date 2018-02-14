@@ -1,0 +1,62 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    tools:context="com.se319s18a9.util3d.LoginFragment">
+
+    <TextView
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:text="@string/global_appName"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:hint="@string/s_fragment_login_hint_username"
+        android:id="@+id/fragment_login_editText_username"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="match_parent"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp" />
+
+    <EditText
+        android:hint="@string/s_fragment_login_hint_password"
+        android:id="@+id/fragment_login_editText_password"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_width="match_parent" />
+
+    <Button
+        android:id="@+id/fragment_login_button_login"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/s_fragment_login_button_login" />
+
+    <Button
+        android:id="@+id/fragment_login_button_forgotPassword"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/s_fragment_login_button_forgotPassword" />
+
+    <Button
+        android:id="@+id/fragment_login_button_createAccount"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/s_fragment_login_button_createAccount" />
+
+</LinearLayout>

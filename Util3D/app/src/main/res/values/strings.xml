@@ -3,4 +3,17 @@
     <!-- Global Strings -->
     <string name="global_appName">Util3D</string>
 
+    <!-- LoginFragment Strings -->
+    <string name="s_fragment_login_hint_username">Username or Email</string>
+    <string name="s_fragment_login_hint_password">Password</string>
+    <string name="s_fragment_login_button_login">Login</string>
+    <string name="s_fragment_login_button_forgotPassword">Forgot Password</string>
+    <string name="s_fragment_login_button_createAccount">Create Account</string>
+
+    <string name="s_fragment_login_error_invalidCredentials">Invalid credentials!</string>
+
+    <string name="s_fragment_login_debug_login">!!!LOGIN!!!</string>
+    <string name="s_fragment_login_debug_forgotPassword">!!!FORGOT PASSWORD!!!</string>
+    <string name="s_fragment_login_debug_createAccount">!!!CREATE ACCOUNT!!!</string>
+
 </resources>
