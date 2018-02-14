@@ -27,7 +27,7 @@
         android:weightSum="12" >
 
         <EditText
-            android:hint="@string/s_fragment_createAccount_hint_username"
+            android:hint="@string/s_fragment_createAccount_editText_hint_username"
             android:id="@+id/fragment_createAccount_editText_username"
             android:layout_height="wrap_content"
             android:layout_weight="11"
@@ -52,7 +52,7 @@
         android:weightSum="12" >
 
         <EditText
-            android:hint="@string/s_fragment_createAccount_hint_email"
+            android:hint="@string/s_fragment_createAccount_editText_hint_email"
             android:id="@+id/fragment_createAccount_editText_email"
             android:inputType="textEmailAddress"
             android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
         android:weightSum="12" >
 
         <EditText
-            android:hint="@string/s_fragment_createAccount_hint_password"
+            android:hint="@string/s_fragment_createAccount_editText_hint_password"
             android:id="@+id/fragment_createAccount_editText_password"
             android:inputType="textPassword"
             android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
         android:weightSum="12" >
 
         <EditText
-            android:hint="@string/s_fragment_createAccount_hint_securityQuestion"
+            android:hint="@string/s_fragment_createAccount_editText_hint_securityQuestion"
             android:id="@+id/fragment_createAccount_editText_securityQuestion"
             android:layout_height="wrap_content"
             android:layout_weight="11"
@@ -129,7 +129,7 @@
         android:weightSum="12" >
 
         <EditText
-            android:hint="@string/s_fragment_createAccount_hint_securityAnswer"
+            android:hint="@string/s_fragment_createAccount_editText_hint_securityAnswer"
             android:id="@+id/fragment_createAccount_editText_securityAnswer"
             android:layout_height="wrap_content"
             android:layout_weight="11"

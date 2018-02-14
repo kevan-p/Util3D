@@ -17,7 +17,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:hint="@string/s_fragment_login_hint_username"
+        android:hint="@string/s_fragment_login_editText_hint_username"
         android:id="@+id/fragment_login_editText_username"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -27,7 +27,7 @@
         android:paddingStart="8dp" />
 
     <EditText
-        android:hint="@string/s_fragment_login_hint_password"
+        android:hint="@string/s_fragment_login_editText_hint_password"
         android:id="@+id/fragment_login_editText_password"
         android:inputType="textPassword"
         android:layout_height="wrap_content"
@@ -43,20 +43,20 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="@string/s_fragment_login_button_login" />
+        android:text="@string/s_fragment_login_button_text_login" />
 
     <Button
         android:id="@+id/fragment_login_button_forgotPassword"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="@string/s_fragment_login_button_forgotPassword" />
+        android:text="@string/s_fragment_login_button_text_forgotPassword" />
 
     <Button
         android:id="@+id/fragment_login_button_createAccount"
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="@string/s_fragment_login_button_createAccount" />
+        android:text="@string/s_fragment_login_button_text_createAccount" />
 
 </LinearLayout>

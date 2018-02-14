@@ -44,6 +44,10 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if(container != null) {
+            container.removeAllViews();
+        }
+
         View v = inflater.inflate(R.layout.fragment_createaccount, container, false);
 
         // Initialize EditTexts and Buttons
@@ -79,7 +83,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
                     // TODO: Store new credentials in Firebase
                     mCallback.onAccountCreated(username, password);
                 } else {
-                    Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_error_fieldError, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_errorMessage_fieldError, Toast.LENGTH_SHORT).show();
                 }
 
                 break;
@@ -99,7 +103,11 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
 
         // TODO: TEST (REMOVE) =====
 
-        if((username.equals("")) || (email.equals("")) || (password.equals("")) || (securityQuestion.equals("")) || (securityAnswer.equals(""))) {
+        if(         (username.equals("")) ||
+                       (email.equals("")) ||
+                    (password.equals("")) ||
+            (securityQuestion.equals("")) ||
+              (securityAnswer.equals(""))) {
             return false;
         }
 

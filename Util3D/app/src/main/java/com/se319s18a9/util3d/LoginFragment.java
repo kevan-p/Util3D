@@ -44,6 +44,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if(container != null) {
+            container.removeAllViews();
+        }
+
         View v = inflater.inflate(R.layout.fragment_login, container, false);
 
         // Initialize EditTexts and Buttons
@@ -74,7 +78,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 if(validateUserCredentials(username, password)) {
                     mCallback.onSuccessfulLogin(username, password);
                 } else {
-                    Toast.makeText(this.getContext(), R.string.s_fragment_login_error_invalidCredentials, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this.getContext(), R.string.s_fragment_login_errorMessage_invalidCredentials, Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.fragment_login_button_forgotPassword:
@@ -83,12 +87,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.fragment_login_button_createAccount:
                 // TODO
-                Toast.makeText(this.getContext(), R.string.s_fragment_login_debug_createAccount, Toast.LENGTH_SHORT).show(); // DEBUG
-//                Fragment createAccountFragment = new CreateAccountFragment();
-//                FragmentManager fragmentManager = getFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.activity_login_fragment, createAccountFragment);
-//                fragmentTransaction.commit();
+                //Toast.makeText(this.getContext(), R.string.s_fragment_login_debug_createAccount, Toast.LENGTH_SHORT).show(); // DEBUG
+                Fragment createAccountFragment = new CreateAccountFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.activity_login_frameLayout_main, createAccountFragment);
+                fragmentTransaction.addToBackStack(null).commit();
         }
     }
 

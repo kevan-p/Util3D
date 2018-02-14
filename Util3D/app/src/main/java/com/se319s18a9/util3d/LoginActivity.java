@@ -44,7 +44,8 @@ public class LoginActivity extends AppCompatActivity implements
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.activity_login_fragment, startingFragment);
+        fragmentTransaction.replace(R.id.activity_login_frameLayout_main, startingFragment);
+
         fragmentTransaction.commit();
     }
 

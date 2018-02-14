@@ -4,31 +4,31 @@
     <string name="global_appName">Util3D</string>
 
     <!-- LoginFragment Strings -->
-    <string name="s_fragment_login_hint_username">Username or Email</string>
-    <string name="s_fragment_login_hint_password">Password</string>
-    <string name="s_fragment_login_button_login">Login</string>
-    <string name="s_fragment_login_button_forgotPassword">Forgot Password</string>
-    <string name="s_fragment_login_button_createAccount">Create Account</string>
-
-    <string name="s_fragment_login_error_invalidCredentials">Invalid credentials!</string>
-
+    <string name="s_fragment_login_editText_hint_username">Username or Email</string>
+    <string name="s_fragment_login_editText_hint_password">Password</string>
+    <string name="s_fragment_login_button_text_login">Login</string>
+    <string name="s_fragment_login_button_text_forgotPassword">Forgot Password</string>
+    <string name="s_fragment_login_button_text_createAccount">Create Account</string>
+    <!-- Error -->
+    <string name="s_fragment_login_errorMessage_invalidCredentials">Invalid credentials!</string>
+    <!-- Debug -->
     <string name="s_fragment_login_debug_login">!!!LOGIN!!!</string>
     <string name="s_fragment_login_debug_forgotPassword">!!!FORGOT PASSWORD!!!</string>
     <string name="s_fragment_login_debug_createAccount">!!!CREATE ACCOUNT!!!</string>
 
     <!-- CreateAccountFragment Strings -->
     <string name="s_fragment_createAccount_title">Create New Account</string>
-    <string name="s_fragment_createAccount_hint_username">Username</string>
-    <string name="s_fragment_createAccount_hint_email">Email</string>
-    <string name="s_fragment_createAccount_hint_password">Password</string>
-    <string name="s_fragment_createAccount_hint_securityQuestion">Security Question</string>
-    <string name="s_fragment_createAccount_hint_securityAnswer">Security Answer</string>
+    <string name="s_fragment_createAccount_editText_hint_username">Username</string>
+    <string name="s_fragment_createAccount_editText_hint_email">Email</string>
+    <string name="s_fragment_createAccount_editText_hint_password">Password</string>
+    <string name="s_fragment_createAccount_editText_hint_securityQuestion">Security Question</string>
+    <string name="s_fragment_createAccount_editText_hint_securityAnswer">Security Answer</string>
     <string name="s_fragment_createAccount_button_clear">X</string>
     <string name="s_fragment_createAccount_button_create">Create</string>
     <string name="s_fragment_createAccount_button_cancel">Cancel</string>
-
-    <string name="s_fragment_createAccount_error_fieldError">Field error!</string>
-
+    <!-- Error -->
+    <string name="s_fragment_createAccount_errorMessage_fieldError">Field error!</string>
+    <!-- Debug -->
     <string name="s_fragment_createAccount_debug_create">!!!CREATE!!!</string>
     <string name="s_fragment_createAccount_debug_cancel">!!!CANCEL!!!</string>
 
