@@ -16,4 +16,20 @@
     <string name="s_fragment_login_debug_forgotPassword">!!!FORGOT PASSWORD!!!</string>
     <string name="s_fragment_login_debug_createAccount">!!!CREATE ACCOUNT!!!</string>
 
+    <!-- CreateAccountFragment Strings -->
+    <string name="s_fragment_createAccount_title">Create New Account</string>
+    <string name="s_fragment_createAccount_hint_username">Username</string>
+    <string name="s_fragment_createAccount_hint_email">Email</string>
+    <string name="s_fragment_createAccount_hint_password">Password</string>
+    <string name="s_fragment_createAccount_hint_securityQuestion">Security Question</string>
+    <string name="s_fragment_createAccount_hint_securityAnswer">Security Answer</string>
+    <string name="s_fragment_createAccount_button_clear">X</string>
+    <string name="s_fragment_createAccount_button_create">Create</string>
+    <string name="s_fragment_createAccount_button_cancel">Cancel</string>
+
+    <string name="s_fragment_createAccount_error_fieldError">Field error!</string>
+
+    <string name="s_fragment_createAccount_debug_create">!!!CREATE!!!</string>
+    <string name="s_fragment_createAccount_debug_cancel">!!!CANCEL!!!</string>
+
 </resources>

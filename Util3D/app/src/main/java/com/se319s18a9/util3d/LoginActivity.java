@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity implements LoginFragment.OnSuccessfulLoginListener {
+public class LoginActivity extends AppCompatActivity implements
+        LoginFragment.OnSuccessfulLoginListener,
+        CreateAccountFragment.OnAccountCreatedListener {
 
 //    static final boolean LOGGED_IN = false;
 
@@ -47,6 +49,12 @@ public class LoginActivity extends AppCompatActivity implements LoginFragment.On
     }
 
     public void onSuccessfulLogin(String name, String password) {
+        // TODO: Login
         Toast.makeText(this, name + " - " + password, Toast.LENGTH_SHORT).show();
+    }
+
+    public void onAccountCreated(String name, String password) {
+        // TODO: Automatically login
+        Toast.makeText(this, name + " : " + password + " - created", Toast.LENGTH_SHORT).show();
     }
 }

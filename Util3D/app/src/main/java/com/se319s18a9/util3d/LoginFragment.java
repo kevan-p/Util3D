@@ -3,6 +3,8 @@ package com.se319s18a9.util3d;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,7 +84,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             case R.id.fragment_login_button_createAccount:
                 // TODO
                 Toast.makeText(this.getContext(), R.string.s_fragment_login_debug_createAccount, Toast.LENGTH_SHORT).show(); // DEBUG
-                break;
+//                Fragment createAccountFragment = new CreateAccountFragment();
+//                FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.activity_login_fragment, createAccountFragment);
+//                fragmentTransaction.commit();
         }
     }
 
