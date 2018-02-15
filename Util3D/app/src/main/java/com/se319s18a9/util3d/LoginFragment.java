@@ -1,10 +1,12 @@
 package com.se319s18a9.util3d;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,7 +85,31 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.fragment_login_button_forgotPassword:
                 // TODO
-                Toast.makeText(this.getContext(), R.string.s_fragment_login_debug_forgotPassword, Toast.LENGTH_SHORT).show(); // DEBUG
+//                Toast.makeText(this.getContext(), R.string.s_fragment_login_debug_forgotPassword, Toast.LENGTH_SHORT).show(); // DEBUG
+
+                LayoutInflater layoutInflater = LayoutInflater.from(this.getContext());
+                View dialogView = layoutInflater.inflate(R.layout.dialog_forgotpassword, null);
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this.getContext());
+                alertDialogBuilder.setTitle(getString(R.string.s_dialog_forgotPassword_title));
+                alertDialogBuilder.setView(dialogView);
+                final EditText userInput = dialogView.findViewById(R.id.dialog_forgotPassword_editText_securityAnswer);
+                alertDialogBuilder
+                        .setPositiveButton("Verify",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // hello
+                                    }
+                                })
+                        .setNegativeButton("Cancel",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
                 break;
             case R.id.fragment_login_button_createAccount:
                 // TODO
