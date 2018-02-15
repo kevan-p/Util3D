@@ -37,4 +37,11 @@
     <string name="s_dialog_forgotPassword_textEdit_securityQuestion">What is your Mother\'s maiden name?</string>
     <string name="s_dialog_forgotPassword_editText_hint_securityAnswer">Security Answer</string>
 
+    <!-- MainActivity Strings -->
+    <string name="s_activity_main_textView_filesPlaceholder">Files Fragment goes here.</string>
+    <string name="s_activity_main_button_createProject">Create Project</string>
+    <string name="s_activity_main_button_openProject">Open Project</string>
+    <string name="s_activity_main_button_settings">Settings</string>
+    <string name="s_activity_main_button_logout">Logout</string>
+
 </resources>

@@ -1,5 +1,6 @@
 package com.se319s18a9.util3d;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -52,6 +53,8 @@ public class LoginActivity extends AppCompatActivity implements
     public void onSuccessfulLogin(String name, String password) {
         // TODO: Login
         Toast.makeText(this, name + " - " + password, Toast.LENGTH_SHORT).show();
+        Intent mainActivityIntent = new Intent(this, MainActivity.class);
+        startActivity(mainActivityIntent);
     }
 
     public void onAccountCreated(String name, String password) {
