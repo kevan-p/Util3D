@@ -1,69 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_main_linearLayout_main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_frameLayout_root"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     tools:context="com.se319s18a9.util3d.MainActivity">
 
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="128dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/s_activity_main_textView_filesPlaceholder"
-            android:textSize="24sp"/>
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2">
-
-            <Button
-                android:gravity="center"
-                android:id="@+id/activity_main_button_createProject"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill_horizontal"
-                android:layout_height="100dp"
-                android:layout_width="0dp"
-                android:text="@string/s_activity_main_button_createProject" />
-
-            <Button
-                android:gravity="center"
-                android:id="@+id/activity_main_button_openProject"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill_horizontal"
-                android:layout_height="100dp"
-                android:layout_width="0dp"
-                android:text="@string/s_activity_main_button_openProject" />
-
-            <Button
-                android:gravity="center"
-                android:id="@+id/activity_main_button_settings"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill_horizontal"
-                android:layout_height="100dp"
-                android:layout_width="0dp"
-                android:text="@string/s_activity_main_button_settings" />
-
-            <Button
-                android:gravity="center"
-                android:id="@+id/activity_main_button_logout"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill_horizontal"
-                android:layout_height="100dp"
-                android:layout_width="0dp"
-                android:text="@string/s_activity_main_button_logout" />
-
-        </GridLayout>
-
-    </LinearLayout>
+    <fragment
+        android:id="@+id/activity_main_fragment"
+        android:name="com.se319s18a9.util3d.Fragments.DashboardFragment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
 
 </FrameLayout>

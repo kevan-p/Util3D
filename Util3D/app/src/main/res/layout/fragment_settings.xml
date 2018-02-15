@@ -5,7 +5,7 @@
     android:paddingEnd="16dp"
     android:paddingStart="16dp"
     android:orientation="vertical"
-    tools:context="com.se319s18a9.util3d.SettingsFragment">
+    tools:context="com.se319s18a9.util3d.Fragments.SettingsFragment">
 
     <TextView
         android:gravity="center"

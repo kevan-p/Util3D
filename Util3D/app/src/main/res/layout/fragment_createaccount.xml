@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    tools:context="com.se319s18a9.util3d.LoginFragment">
+    tools:context="com.se319s18a9.util3d.Fragments.LoginFragment">
 
     <TextView
         android:gravity="center"

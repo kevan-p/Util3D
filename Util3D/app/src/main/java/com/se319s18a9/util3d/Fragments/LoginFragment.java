@@ -1,4 +1,4 @@
-package com.se319s18a9.util3d;
+package com.se319s18a9.util3d.Fragments;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.se319s18a9.util3d.R;
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
@@ -117,7 +119,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 Fragment createAccountFragment = new CreateAccountFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.activity_login_frameLayout_main, createAccountFragment);
+                fragmentTransaction.replace(R.id.activity_login_frameLayout_root, createAccountFragment);
                 fragmentTransaction.addToBackStack(null).commit();
         }
     }

@@ -1,4 +1,4 @@
-package com.se319s18a9.util3d;
+package com.se319s18a9.util3d.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.se319s18a9.util3d.R;
 
 public class CreateAccountFragment extends Fragment implements View.OnClickListener {
 
