@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.se319s18a9.util3d.Fragments.DashboardFragment;
-import com.se319s18a9.util3d.Fragments.LoginFragment;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -22,32 +22,6 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Username: John Doe"
-        android:textStyle="bold"/>
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:weightSum="5"
-        android:orientation="horizontal">
-
-        <EditText
-            android:hint="@string/s_fragment_settings_editText_hint_updateUsername"
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="@string/s_fragment_settings_button_save"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:text="Email: johndoe@example.com"
         android:textStyle="bold"/>
 
@@ -94,58 +68,6 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/s_fragment_settings_button_save"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="Security Question: What is your Mother\'s maiden name?"
-        android:textStyle="bold"/>
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:weightSum="5"
-        android:orientation="horizontal">
-
-        <EditText
-            android:hint="@string/s_fragment_settings_editText_hint_updateSecurityQuestion"
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="@string/s_fragment_settings_button_save"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="Security Answer: Mae"
-        android:textStyle="bold"/>
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:weightSum="5"
-        android:orientation="horizontal">
-
-        <EditText
-            android:hint="@string/s_fragment_settings_editText_hint_updateSecurityAnswer"
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="@string/s_fragment_settings_button_save" />
 
     </LinearLayout>
 

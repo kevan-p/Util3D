@@ -11,10 +11,12 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.se319s18a9.util3d.R;
+import com.se319s18a9.util3d.backend.User;
 
 public class DashboardFragment extends Fragment implements View.OnClickListener {
 
     Button settingsButton;
+    Button logoutButton;
 
     public DashboardFragment() {
         // Required empty public constructor
@@ -30,6 +32,9 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
         settingsButton = v.findViewById(R.id.fragment_dashboard_button_settings);
         settingsButton .setOnClickListener(this);
+
+        logoutButton = v.findViewById(R.id.fragment_dashboard_button_logout);
+        logoutButton.setOnClickListener(this);
 
         return v;
     }
@@ -52,7 +57,8 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
                 fragmentTransaction.addToBackStack(null).commit();
                 break;
             case R.id.fragment_dashboard_button_logout:
-                // TODO
+                User.getInstance().signOut();
+                Toast.makeText(getContext(), R.string.s_fragment_dashboard_alertMessage_loggedOut, Toast.LENGTH_SHORT).show();
                 break;
         }
     }

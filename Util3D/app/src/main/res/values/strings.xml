@@ -43,6 +43,7 @@
     <string name="s_fragment_dashboard_button_openProject">Open Project</string>
     <string name="s_fragment_dashboard_button_settings">Settings</string>
     <string name="s_fragment_dashboard_button_logout">Logout</string>
+    <string name="s_fragment_dashboard_alertMessage_loggedOut">Logged out.</string>
 
     <!-- SettingsFragment Strings -->
     <string name="s_fragment_settings_title">Settings</string>
