@@ -1,5 +1,7 @@
 package com.se319s18a9.util3d.backend;
 
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
@@ -25,8 +27,15 @@ public class User {
 
     //TODO: If user is already logged in, decide how to handle this request
     public boolean validateAndLogin(String username, String password) {
-        mAuth.signInWithEmailAndPassword(username, password);
-        return isAlreadyLoggedIn();
+        if(isAlreadyLoggedIn())
+        {
+            return true;
+        }
+        else {
+            Task<AuthResult> loginTask = mAuth.signInWithEmailAndPassword(username, password);
+            while (!loginTask.isComplete()) ;
+            return loginTask.isSuccessful();
+        }
     }
 
     public void sendPasswordResetEmail(String email){
@@ -35,20 +44,44 @@ public class User {
 
     //TODO: add display name registration
     public boolean createAccount(String email, String password){
-        return mAuth.createUserWithEmailAndPassword(email, password).isSuccessful();
+        Task<AuthResult> createTask = mAuth.createUserWithEmailAndPassword(email, password);
+        while(!createTask.isComplete());
+        return createTask.isSuccessful();
     }
 
     public boolean changeEmail(String email){
-        return isAlreadyLoggedIn() ? mAuth.getCurrentUser().updateEmail(email).isSuccessful() : false;
+        if (isAlreadyLoggedIn())
+        {
+            Task changeTask = mAuth.getCurrentUser().updateEmail(email);
+            while(!changeTask.isComplete());
+            return changeTask.isSuccessful();
+        }
+        else {
+            return false;
+        }
     }
 
-    public boolean changeDisplayName(String displayName){
-        UserProfileChangeRequest.Builder change = new UserProfileChangeRequest.Builder();
-        return isAlreadyLoggedIn() ? mAuth.getCurrentUser().updateProfile(change.setDisplayName(displayName).build()).isSuccessful() : false;
+    public boolean changeDisplayName(String displayName) {
+        if (isAlreadyLoggedIn()) {
+            UserProfileChangeRequest.Builder change = new UserProfileChangeRequest.Builder();
+            Task changeTask = mAuth.getCurrentUser().updateProfile(change.setDisplayName(displayName).build());
+            while (!changeTask.isComplete());
+            return changeTask.isSuccessful();
+        } else {
+            return false;
+        }
     }
 
     public boolean changePassword(String password){
-        return isAlreadyLoggedIn() ? mAuth.getCurrentUser().updatePassword(password).isSuccessful() : false;
+        if (isAlreadyLoggedIn())
+        {
+            Task changeTask = mAuth.getCurrentUser().updatePassword(password);
+            while(!changeTask.isComplete());
+            return changeTask.isSuccessful();
+        }
+        else {
+            return false;
+        }
     }
 
     public void signOut() {
