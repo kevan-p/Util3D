@@ -54,4 +54,12 @@ public class User {
     public void signOut() {
         mAuth.signOut();
     }
+
+    public String getDisplayName(){
+        return isAlreadyLoggedIn() ? mAuth.getCurrentUser().getDisplayName() : "";
+    }
+
+    public String getEmail(){
+        return isAlreadyLoggedIn() ? mAuth.getCurrentUser().getEmail() : "";
+    }
 }
