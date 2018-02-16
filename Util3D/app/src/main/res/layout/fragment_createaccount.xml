@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    tools:context="com.se319s18a9.util3d.LoginFragment">
+    tools:context="com.se319s18a9.util3d.Fragments.LoginFragment">
 
     <TextView
         android:gravity="center"
@@ -33,33 +33,8 @@
             android:layout_weight="11"
             android:layout_width="0dp"
             android:paddingEnd="8dp"
-            android:paddingStart="8dp" />
-
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:text="@string/s_fragment_createAccount_button_clear"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:paddingEnd="16dp"
-        android:paddingStart="16dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="12" >
-
-        <EditText
-            android:hint="@string/s_fragment_createAccount_editText_hint_email"
-            android:id="@+id/fragment_createAccount_editText_email"
-            android:inputType="textEmailAddress"
-            android:layout_height="wrap_content"
-            android:layout_weight="11"
-            android:layout_width="0dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp" />
+            android:paddingStart="8dp"
+            android:inputType="textEmailAddress"/>
 
         <Button
             android:layout_height="wrap_content"
@@ -81,56 +56,6 @@
             android:hint="@string/s_fragment_createAccount_editText_hint_password"
             android:id="@+id/fragment_createAccount_editText_password"
             android:inputType="textPassword"
-            android:layout_height="wrap_content"
-            android:layout_weight="11"
-            android:layout_width="0dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp" />
-
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:text="@string/s_fragment_createAccount_button_clear"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:paddingEnd="16dp"
-        android:paddingStart="16dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="12" >
-
-        <EditText
-            android:hint="@string/s_fragment_createAccount_editText_hint_securityQuestion"
-            android:id="@+id/fragment_createAccount_editText_securityQuestion"
-            android:layout_height="wrap_content"
-            android:layout_weight="11"
-            android:layout_width="0dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp" />
-
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:text="@string/s_fragment_createAccount_button_clear"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:paddingEnd="16dp"
-        android:paddingStart="16dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="12" >
-
-        <EditText
-            android:hint="@string/s_fragment_createAccount_editText_hint_securityAnswer"
-            android:id="@+id/fragment_createAccount_editText_securityAnswer"
             android:layout_height="wrap_content"
             android:layout_weight="11"
             android:layout_width="0dp"

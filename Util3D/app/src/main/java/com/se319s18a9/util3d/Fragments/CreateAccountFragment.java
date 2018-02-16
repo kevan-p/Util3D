@@ -1,4 +1,4 @@
-package com.se319s18a9.util3d;
+package com.se319s18a9.util3d.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,15 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.se319s18a9.util3d.R;
+import com.se319s18a9.util3d.backend.User;
+
 public class CreateAccountFragment extends Fragment implements View.OnClickListener {
 
     OnAccountCreatedListener mCallback;
 
     private EditText usernameEditText;
-    private EditText emailEditText;
     private EditText passwordEditText;
-    private EditText securityQuestionEditText;
-    private EditText securityAnswerEditText;
 
     Button createButton;
     Button cancelButton;
@@ -44,7 +44,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if(container != null) {
+        if (container != null) {
             container.removeAllViews();
         }
 
@@ -53,15 +53,12 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
         // Initialize EditTexts and Buttons
 
         usernameEditText = v.findViewById(R.id.fragment_createAccount_editText_username);
-        emailEditText = v.findViewById(R.id.fragment_createAccount_editText_email);
         passwordEditText = v.findViewById(R.id.fragment_createAccount_editText_password);
-        securityQuestionEditText= v.findViewById(R.id.fragment_createAccount_editText_securityQuestion);
-        securityAnswerEditText= v.findViewById(R.id.fragment_createAccount_editText_securityAnswer);
 
-        createButton= v.findViewById(R.id.fragment_createAccount_button_create);
+        createButton = v.findViewById(R.id.fragment_createAccount_button_create);
         createButton.setOnClickListener(this);
 
-        cancelButton= v.findViewById(R.id.fragment_createAccount_button_cancel);
+        cancelButton = v.findViewById(R.id.fragment_createAccount_button_cancel);
         cancelButton.setOnClickListener(this);
 
         return v;
@@ -69,17 +66,14 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()) {
+        switch (v.getId()) {
             case R.id.fragment_createAccount_button_create:
                 Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_debug_create, Toast.LENGTH_SHORT).show(); // DEBUG
 
                 String username = this.getEditTextValue(usernameEditText);
-                String email = this.getEditTextValue(emailEditText);
                 String password = this.getEditTextValue(passwordEditText);
-                String securityQuestion = this.getEditTextValue(securityQuestionEditText);
-                String securityAnswer = this.getEditTextValue(securityAnswerEditText);
 
-                if(validateFields(username, password, email, securityQuestion, securityAnswer)) {
+                if (User.getInstance().createAccount(username, password)) {
                     // TODO: Store new credentials in Firebase
                     mCallback.onAccountCreated(username, password);
                 } else {
@@ -90,29 +84,12 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
             case R.id.fragment_createAccount_button_cancel:
                 // TODO: Discard credentials and return to LoginFragment
                 Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_debug_cancel, Toast.LENGTH_SHORT).show(); // DEBUG
+                getActivity().onBackPressed();
                 break;
         }
     }
 
     private String getEditTextValue(EditText editText) {
         return editText.getText().toString();
-    }
-
-    private boolean validateFields(String username, String email, String password, String securityQuestion, String securityAnswer) {
-        // TODO: Check against Firebase existing credentials table
-
-        // TODO: TEST (REMOVE) =====
-
-        if(         (username.equals("")) ||
-                       (email.equals("")) ||
-                    (password.equals("")) ||
-            (securityQuestion.equals("")) ||
-              (securityAnswer.equals(""))) {
-            return false;
-        }
-
-        // TODO: TEST (REMOVE) =====
-
-        return true;
     }
 }

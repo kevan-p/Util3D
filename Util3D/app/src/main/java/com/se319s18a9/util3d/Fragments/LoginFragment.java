@@ -1,4 +1,4 @@
-package com.se319s18a9.util3d;
+package com.se319s18a9.util3d.Fragments;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.se319s18a9.util3d.R;
+import com.se319s18a9.util3d.backend.User;
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
@@ -46,7 +49,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if(container != null) {
+        if (container != null) {
             container.removeAllViews();
         }
 
@@ -71,13 +74,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()) {
+        switch (v.getId()) {
             case R.id.fragment_login_button_login:
-                // TODO
-//                Toast.makeText(this.getContext(), R.string.s_fragment_login_debug_login, Toast.LENGTH_SHORT).show(); // DEBUG
                 String username = this.getEditTextValue(usernameEditText);
                 String password = this.getEditTextValue(passwordEditText);
-                if(validateUserCredentials(username, password)) {
+
+                if (User.getInstance().validateAndLogin(username, password)) {
                     mCallback.onSuccessfulLogin(username, password);
                 } else {
                     Toast.makeText(this.getContext(), R.string.s_fragment_login_errorMessage_invalidCredentials, Toast.LENGTH_SHORT).show();
@@ -85,14 +87,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.fragment_login_button_forgotPassword:
                 // TODO
-//                Toast.makeText(this.getContext(), R.string.s_fragment_login_debug_forgotPassword, Toast.LENGTH_SHORT).show(); // DEBUG
 
                 LayoutInflater layoutInflater = LayoutInflater.from(this.getContext());
                 View dialogView = layoutInflater.inflate(R.layout.dialog_forgotpassword, null);
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this.getContext());
                 alertDialogBuilder.setTitle(getString(R.string.s_dialog_forgotPassword_title));
                 alertDialogBuilder.setView(dialogView);
-                final EditText userInput = dialogView.findViewById(R.id.dialog_forgotPassword_editText_securityAnswer);
                 alertDialogBuilder
                         .setPositiveButton("Verify",
                                 new DialogInterface.OnClickListener() {
@@ -112,31 +112,15 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
                 break;
             case R.id.fragment_login_button_createAccount:
-                // TODO
-                //Toast.makeText(this.getContext(), R.string.s_fragment_login_debug_createAccount, Toast.LENGTH_SHORT).show(); // DEBUG
                 Fragment createAccountFragment = new CreateAccountFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.activity_login_frameLayout_main, createAccountFragment);
+                fragmentTransaction.replace(R.id.activity_login_frameLayout_root, createAccountFragment);
                 fragmentTransaction.addToBackStack(null).commit();
         }
     }
 
     private String getEditTextValue(EditText editText) {
         return editText.getText().toString();
-    }
-
-    private boolean validateUserCredentials(String username, String password) {
-        // TODO: Validate from local storage or Firebase
-
-        // TODO: TEST (REMOVE) =====
-
-        if((username.equals("")) || (password.equals(""))) {
-            return false;
-        }
-
-        // TODO: TEST (REMOVE) =====
-
-        return true;
     }
 }

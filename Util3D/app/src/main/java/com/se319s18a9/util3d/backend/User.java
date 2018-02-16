@@ -23,7 +23,7 @@ public class User {
         return mAuth.getCurrentUser() != null;
     }
 
-    //TODO: If user is already logged in, decide how to handle this request
+    // TODO: If user is already logged in, decide how to handle this request
     public boolean validateAndLogin(String username, String password) {
         mAuth.signInWithEmailAndPassword(username, password);
         return isAlreadyLoggedIn();
@@ -33,7 +33,7 @@ public class User {
         mAuth.sendPasswordResetEmail(email);
     }
 
-    //TODO: add display name registration
+    // TODO: add display name registration
     public boolean createAccount(String email, String password){
         return mAuth.createUserWithEmailAndPassword(email, password).isSuccessful();
     }
