@@ -1,8 +1,8 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:orientation="vertical"
     tools:context="com.se319s18a9.util3d.Fragments.CreateProjectFragment">
 
@@ -11,68 +11,76 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
-        android:paddingStart="16sp"
-        android:paddingEnd="16sp"
         android:layout_width="match_parent"
-        android:text="@string/s_fragment_createproject_title"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/s_fragment_createProject_title"
         android:textSize="36sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/projectname"
-        android:layout_width="match_parent"
+        android:hint="@string/s_fragment_createProject_editText_hint_projectName"
+        android:id="@+id/fragment_createProject_editText_projectName"
         android:layout_height="wrap_content"
-        android:paddingStart="16sp"
-        android:paddingEnd="16sp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Project Name" />
+        android:layout_width="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"/>
 
     <EditText
-        android:id="@+id/location"
-        android:layout_width="match_parent"
+        android:hint="@string/s_fragment_createProject_editText_hint_location"
+        android:id="@+id/fragment_createProject_editText_location"
         android:layout_height="wrap_content"
-        android:paddingStart="16sp"
-        android:paddingEnd="16sp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Location" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp" />
 
     <Spinner
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content" />
+
     <EditText
-        android:id="@+id/Orginization"
-        android:layout_width="match_parent"
+        android:hint="@string/s_fragment_createProject_editText_hint_organization"
+        android:id="@+id/fragment_createProject_editText_organization"
         android:layout_height="wrap_content"
-        android:paddingStart="16sp"
-        android:paddingEnd="16sp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Orginization"
-        />
-    <LinearLayout
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_width="match_parent"
+        android:paddingEnd="16sp"
+        android:paddingStart="16sp" />
+
+    <View
+        android:layout_height="8dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        >
-
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
 
         <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:id="@+id/fragment_createProject_button_create"
             android:layout_height="wrap_content"
-            android:text="@string/s_fragment_createproject_button_cancel"
-            />
-        />
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="0dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/s_fragment_createProject_button_create"/>
+
         <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:id="@+id/fragment_createProject_button_cancel"
             android:layout_height="wrap_content"
-            android:text="@string/s_fragment_createproject_button_create"/>
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/s_fragment_createProject_button_cancel" />
 
     </LinearLayout>
-
 
 </LinearLayout>
