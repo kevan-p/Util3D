@@ -22,10 +22,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     OnSuccessfulLoginListener mCallback;
 
     private EditText usernameEditText;
-    private EditText passwordEditText;
 
+    private EditText passwordEditText;
     Button loginButton;
     Button forgotPasswordButton;
+
     Button createAccountButton;
 
     public interface OnSuccessfulLoginListener {
@@ -55,7 +56,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         View v = inflater.inflate(R.layout.fragment_login, container, false);
 
-        // Initialize EditTexts and Buttons
+        // Initialize EditTexts, and Buttons
 
         usernameEditText = v.findViewById(R.id.fragment_login_editText_username);
         passwordEditText = v.findViewById(R.id.fragment_login_editText_password);

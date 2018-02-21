@@ -23,7 +23,7 @@
     <string name="s_fragment_createAccount_editText_hint_password">Password</string>
     <string name="s_fragment_createAccount_editText_hint_securityQuestion">Security Question</string>
     <string name="s_fragment_createAccount_editText_hint_securityAnswer">Security Answer</string>
-    <string name="s_fragment_createAccount_button_clear">X</string>
+    <string name="s_fragment_createAccount_button_clear">Clear</string>
     <string name="s_fragment_createAccount_button_create">Create</string>
     <string name="s_fragment_createAccount_button_cancel">Cancel</string>
     <!-- Error -->
@@ -52,6 +52,12 @@
     <string name="s_fragment_settings_editText_hint_updatePassword">New Password</string>
     <string name="s_fragment_settings_editText_hint_updateSecurityQuestion">New Security Question</string>
     <string name="s_fragment_settings_editText_hint_updateSecurityAnswer">New Security Answer</string>
+    <string name="s_fragment_settings_switch_label_useSSO">Use SSO</string>
     <string name="s_fragment_settings_button_save">Save</string>
+
+    <!-- CreateProjectFragment Strings -->
+    <string name="s_fragment_createproject_title">Create Project</string>
+    <string name="s_fragment_createproject_button_create">Create</string>
+    <string name="s_fragment_createproject_button_cancel">Cancel</string>
 
 </resources>

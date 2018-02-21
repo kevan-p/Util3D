@@ -71,4 +71,55 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_height="16dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="Enable Dark Theme"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/fragment_settings_switch_enableDarkTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="16dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:weightSum="5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="Enable SSO"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/fragment_settings_switch_useSSO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
 </LinearLayout>
