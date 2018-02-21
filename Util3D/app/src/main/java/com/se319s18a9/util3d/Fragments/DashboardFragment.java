@@ -15,6 +15,7 @@ import com.se319s18a9.util3d.backend.User;
 
 public class DashboardFragment extends Fragment implements View.OnClickListener {
 
+    Button createProjectButton;
     Button settingsButton;
     Button logoutButton;
 
@@ -30,8 +31,11 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
         View v = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
+        createProjectButton = v.findViewById(R.id.fragment_dashboard_button_createProject);
+        createProjectButton.setOnClickListener(this);
+
         settingsButton = v.findViewById(R.id.fragment_dashboard_button_settings);
-        settingsButton .setOnClickListener(this);
+        settingsButton.setOnClickListener(this);
 
         logoutButton = v.findViewById(R.id.fragment_dashboard_button_logout);
         logoutButton.setOnClickListener(this);
@@ -44,17 +48,24 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
         switch(v.getId()) {
             case R.id.fragment_dashboard_button_createProject:
                 // TODO
+
+                Fragment mapFragment = new MapFragment();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.activity_main_frameLayout_root, mapFragment);
+                fragmentTransaction.addToBackStack(null).commit();
+
                 break;
             case R.id.fragment_dashboard_button_openProject:
                 // TODO
                 break;
             case R.id.fragment_dashboard_button_settings:
                 Toast.makeText(getContext(), R.string.global_appName, Toast.LENGTH_SHORT).show();
-                Fragment settingsFragment = new SettingsFragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.activity_main_frameLayout_root, settingsFragment);
-                fragmentTransaction.addToBackStack(null).commit();
+//                Fragment settingsFragment = new SettingsFragment();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.activity_main_frameLayout_root, settingsFragment);
+//                fragmentTransaction.addToBackStack(null).commit();
                 break;
             case R.id.fragment_dashboard_button_logout:
                 User.getInstance().signOut();
