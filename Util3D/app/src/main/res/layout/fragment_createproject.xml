@@ -1,0 +1,78 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.se319s18a9.util3d.Fragments.CreateProjectFragment">
+
+    <TextView
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16sp"
+        android:paddingEnd="16sp"
+        android:layout_width="match_parent"
+        android:text="@string/s_fragment_createproject_title"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/projectname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16sp"
+        android:paddingEnd="16sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Project Name" />
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16sp"
+        android:paddingEnd="16sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Location" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/Orginization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16sp"
+        android:paddingEnd="16sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Orginization"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/s_fragment_createproject_button_cancel"
+            />
+        />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/s_fragment_createproject_button_create"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
