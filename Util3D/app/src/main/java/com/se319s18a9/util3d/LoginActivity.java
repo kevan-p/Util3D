@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.se319s18a9.util3d.Fragments.CreateAccountFragment;
@@ -15,10 +16,17 @@ public class LoginActivity extends AppCompatActivity implements
         LoginFragment.OnSuccessfulLoginListener,
         CreateAccountFragment.OnAccountCreatedListener {
 
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Login");
+        // TODO: Set title programmatically based on active fragment
 
         selectStartingFragment();
     }

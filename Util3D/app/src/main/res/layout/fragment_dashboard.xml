@@ -24,38 +24,58 @@
         android:paddingStart="16dp">
 
         <Button
+            android:background="@color/colorAccent"
             android:gravity="center"
             android:id="@+id/fragment_dashboard_button_createProject"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:layout_height="150dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
             android:layout_width="0dp"
             android:text="@string/s_fragment_dashboard_button_createProject" />
 
         <Button
+            android:background="@color/colorAccent"
             android:gravity="center"
             android:id="@+id/fragment_dashboard_button_openProject"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:layout_height="150dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="0dp"
             android:layout_width="0dp"
             android:text="@string/s_fragment_dashboard_button_openProject" />
 
         <Button
+            android:background="@color/colorAccent"
             android:gravity="center"
             android:id="@+id/fragment_dashboard_button_settings"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:layout_height="150dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
             android:layout_width="0dp"
             android:text="@string/s_fragment_dashboard_button_settings" />
 
         <Button
+            android:background="@color/colorAccent"
             android:gravity="center"
             android:id="@+id/fragment_dashboard_button_logout"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
             android:layout_height="150dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
             android:layout_width="0dp"
             android:text="@string/s_fragment_dashboard_button_logout" />
 
