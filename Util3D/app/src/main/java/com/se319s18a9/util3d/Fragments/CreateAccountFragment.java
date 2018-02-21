@@ -68,22 +68,22 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fragment_createAccount_button_create:
-                Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_debug_create, Toast.LENGTH_SHORT).show(); // DEBUG
+                //Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_debug_create, Toast.LENGTH_SHORT).show(); // DEBUG
 
                 String username = this.getEditTextValue(usernameEditText);
                 String password = this.getEditTextValue(passwordEditText);
 
-                if (User.getInstance().createAccount(username, password)) {
-                    // TODO: Store new credentials in Firebase
+                try{
+                    User.getInstance().createAccount(username, password);
                     mCallback.onAccountCreated(username, password);
-                } else {
-                    Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_errorMessage_fieldError, Toast.LENGTH_SHORT).show();
+                }catch(Exception e){
+                    Toast.makeText(this.getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
 
                 break;
             case R.id.fragment_createAccount_button_cancel:
                 // TODO: Discard credentials and return to LoginFragment
-                Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_debug_cancel, Toast.LENGTH_SHORT).show(); // DEBUG
+                //Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_debug_cancel, Toast.LENGTH_SHORT).show(); // DEBUG
                 getActivity().onBackPressed();
                 break;
         }
