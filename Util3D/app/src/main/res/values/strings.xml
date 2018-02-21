@@ -56,8 +56,11 @@
     <string name="s_fragment_settings_button_save">Save</string>
 
     <!-- CreateProjectFragment Strings -->
-    <string name="s_fragment_createproject_title">Create Project</string>
-    <string name="s_fragment_createproject_button_create">Create</string>
-    <string name="s_fragment_createproject_button_cancel">Cancel</string>
+    <string name="s_fragment_createProject_title">Create Project</string>
+    <string name="s_fragment_createProject_button_create">Create</string>
+    <string name="s_fragment_createProject_button_cancel">Cancel</string>
+    <string name="s_fragment_createProject_editText_hint_projectName">Project Name</string>
+    <string name="s_fragment_createProject_editText_hint_location">Location</string>
+    <string name="s_fragment_createProject_editText_hint_organization">Organization</string>
 
 </resources>

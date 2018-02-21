@@ -50,10 +50,10 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
         switch(v.getId()) {
             case R.id.fragment_dashboard_button_createProject:
-                Fragment mapFragment = new MapFragment();
+                Fragment createProjectFragment = new CreateProjectFragment();
                 fragmentManager = getActivity().getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.activity_main_frameLayout_root, mapFragment);
+                fragmentTransaction.replace(R.id.activity_main_frameLayout_root, createProjectFragment);
                 fragmentTransaction.addToBackStack(null).commit();
                 break;
             case R.id.fragment_dashboard_button_openProject:
