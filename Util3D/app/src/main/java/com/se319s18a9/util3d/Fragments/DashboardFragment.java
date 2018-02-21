@@ -45,27 +45,26 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
+        FragmentManager fragmentManager;
+        FragmentTransaction fragmentTransaction;
+
         switch(v.getId()) {
             case R.id.fragment_dashboard_button_createProject:
-                // TODO
-
                 Fragment mapFragment = new MapFragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.activity_main_frameLayout_root, mapFragment);
                 fragmentTransaction.addToBackStack(null).commit();
-
                 break;
             case R.id.fragment_dashboard_button_openProject:
                 // TODO
                 break;
             case R.id.fragment_dashboard_button_settings:
-                Toast.makeText(getContext(), R.string.global_appName, Toast.LENGTH_SHORT).show();
-//                Fragment settingsFragment = new SettingsFragment();
-//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.activity_main_frameLayout_root, settingsFragment);
-//                fragmentTransaction.addToBackStack(null).commit();
+                Fragment settingsFragment = new SettingsFragment();
+                fragmentManager = getActivity().getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.activity_main_frameLayout_root, settingsFragment);
+                fragmentTransaction.addToBackStack(null).commit();
                 break;
             case R.id.fragment_dashboard_button_logout:
                 User.getInstance().signOut();
