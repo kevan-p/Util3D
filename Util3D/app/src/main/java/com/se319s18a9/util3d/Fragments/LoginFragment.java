@@ -30,7 +30,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     Button createAccountButton;
 
     public interface OnSuccessfulLoginListener {
-        void onSuccessfulLogin(String username, String password);
+        void onSuccessfulLogin();
     }
 
     public LoginFragment() {
@@ -81,7 +81,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 String password = this.getEditTextValue(passwordEditText);
 
                 if (User.getInstance().validateAndLogin(username, password)) {
-                    mCallback.onSuccessfulLogin(username, password);
+                    mCallback.onSuccessfulLogin();
                 } else {
                     Toast.makeText(this.getContext(), R.string.s_fragment_login_errorMessage_invalidCredentials, Toast.LENGTH_SHORT).show();
                 }
