@@ -33,8 +33,8 @@ public class LoginActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onStart(){
-        super.onStart();
+    public void onResume(){
+        super.onResume();
         if(User.getInstance().isAlreadyLoggedIn())
         {
             onSuccessfulLogin();

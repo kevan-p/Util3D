@@ -90,27 +90,34 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 // TODO
 
                 LayoutInflater layoutInflater = LayoutInflater.from(this.getContext());
-                View dialogView = layoutInflater.inflate(R.layout.dialog_forgotpassword, null);
+                final View dialogView = layoutInflater.inflate(R.layout.dialog_forgotpassword, null);
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this.getContext());
                 alertDialogBuilder.setTitle(getString(R.string.s_dialog_forgotPassword_title));
                 alertDialogBuilder.setView(dialogView);
                 alertDialogBuilder
-                        .setPositiveButton("Verify",
+                        .setPositiveButton(R.string.s_dialog_forgotPassword_button_sendEmail,
                                 new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        // hello
-                                    }
-                                })
-                        .setNegativeButton("Cancel",
+                                    public void onClick(DialogInterface dialog, int id) {}})
+                        .setNegativeButton(R.string.s_dialog_forgotPassword_button_cancel,
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         dialog.cancel();
                                     }
                                 });
-
-                AlertDialog alertDialog = alertDialogBuilder.create();
+                final AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.show();
-
+                alertDialog.getButton(alertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            User.getInstance().sendPasswordResetEmail(((EditText) dialogView.findViewById(R.id.dialog_forgotPassword_editText_email)).getText().toString());
+                            Toast.makeText(v.getContext(), R.string.s_dialog_forgotPassword_successMessage, Toast.LENGTH_SHORT).show();
+                            alertDialog.dismiss();
+                        } catch (Exception e) {
+                            Toast.makeText(v.getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
                 break;
             case R.id.fragment_login_button_createAccount:
                 Fragment createAccountFragment = new CreateAccountFragment();

@@ -4,7 +4,7 @@
     <string name="global_appName">Util3D</string>
 
     <!-- LoginFragment Strings -->
-    <string name="s_fragment_login_editText_hint_username">Username or Email</string>
+    <string name="s_fragment_login_editText_hint_username">Email</string>
     <string name="s_fragment_login_editText_hint_password">Password</string>
     <string name="s_fragment_login_button_text_login">Login</string>
     <string name="s_fragment_login_button_text_forgotPassword">Forgot Password</string>
@@ -34,8 +34,11 @@
 
     <!-- ForgotPassword Dialog Strings -->
     <string name="s_dialog_forgotPassword_title">Forgot Password</string>
-    <string name="s_dialog_forgotPassword_textEdit_securityQuestion">What is your Mother\'s maiden name?</string>
-    <string name="s_dialog_forgotPassword_editText_hint_securityAnswer">Security Answer</string>
+    <string name="s_dialog_forgotPassword_textEdit_emailInstructions">Enter your email to receive a password reset email:</string>
+    <string name="s_dialog_forgotPassword_editText_hint_email">Email</string>
+    <string name="s_dialog_forgotPassword_button_sendEmail">Send reset email</string>
+    <string name="s_dialog_forgotPassword_button_cancel">Cancel</string>
+    <string name="s_dialog_forgotPassword_successMessage">Reset email sent</string>
 
     <!-- DashboardFragment Strings -->
     <string name="s_fragment_dashboard_textView_filesPlaceholder">Files Fragment goes here.</string>

@@ -75,8 +75,8 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
 
                 try{
                     User.getInstance().createAccount(username, password);
-                    //TODO: end this create account activity before logging in
-                    mCallback.onAccountCreated(username, password);
+                    //TODO: verify this is correct way to do this
+                    getActivity().getSupportFragmentManager().popBackStackImmediate();
                 }catch(Exception e){
                     Toast.makeText(this.getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
