@@ -32,15 +32,6 @@ public class LoginActivity extends AppCompatActivity implements
         selectStartingFragment();
     }
 
-    @Override
-    public void onResume(){
-        super.onResume();
-        if(User.getInstance().isAlreadyLoggedIn())
-        {
-            onSuccessfulLogin();
-        }
-    }
-
     public void selectStartingFragment() {
         Fragment startingFragment = new LoginFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();

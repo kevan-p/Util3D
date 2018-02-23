@@ -74,6 +74,15 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     }
 
     @Override
+    public void onResume(){
+        super.onResume();
+        if(User.getInstance().isAlreadyLoggedIn())
+        {
+            mCallback.onSuccessfulLogin();
+        }
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fragment_login_button_login:
