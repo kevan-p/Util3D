@@ -65,8 +65,10 @@ public class CreateProjectFragment extends Fragment implements View.OnClickListe
     }
 
 
-
-
+    /**
+     * Method called whenever the screen is clicked.
+     * @param v
+     */
     @Override
     public void onClick(View v) {
         // TODO: Add Switch statement for save buttons
@@ -94,15 +96,20 @@ public class CreateProjectFragment extends Fragment implements View.OnClickListe
         }
     }
 
+    /**
+     * This sets the utility string from the given string.
+     * @param util
+     */
     //TODO check if it is a correct utility
     public void setUtility(String util){
         this.utility = util;
-        Toast.makeText(this.getContext(),
-                "ItemSelected: " + utility,
-                Toast.LENGTH_SHORT).show();
     }
 
 
+    /**
+     * Public class used for the spinner
+     * TODO Update this to multi selector
+     */
     public class CustomSpinnerListener implements AdapterView.OnItemSelectedListener {
 
         public void onItemSelected(AdapterView<?> parent, View view, int pos,long id) {
@@ -114,18 +121,40 @@ public class CreateProjectFragment extends Fragment implements View.OnClickListe
 
     }
 
+    /**
+     * This method gets the string value from the edittext given
+     *
+     * @param editText
+     * @return String from editext
+     */
     private String getEditTextValue(EditText editText) {
         return editText.getText().toString();
     }
+
+    /**
+     * @return utility String
+     */
     public String getUtility(){
         return utility;
     }
+
+    /**
+     * @return orginization String
+     */
     public String getOrginization(){
         return orginization;
     }
+
+    /**
+     * @return projectname String
+     */
     public String getProjectName(){
         return projectName;
     }
+
+    /**
+     * @return Orginization
+     */
     public String getLocation(){
         return orginization;
     }
