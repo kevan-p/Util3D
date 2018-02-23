@@ -62,5 +62,12 @@
     <string name="s_fragment_createProject_editText_hint_projectName">Project Name</string>
     <string name="s_fragment_createProject_editText_hint_location">Location</string>
     <string name="s_fragment_createProject_editText_hint_organization">Organization</string>
+    <string-array name="s_fragment_createProject_spinner_utilities">
+        <item>Water</item>
+        <item>Gas</item>
+        <item>Electric</item>
+        <item>Sewage</item>
+    </string-array>
+
 
 </resources>
