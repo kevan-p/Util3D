@@ -17,9 +17,6 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
 
     OnAccountCreatedListener mCallback;
 
-    private EditText usernameEditText;
-    private EditText passwordEditText;
-
     Button createButton;
     Button cancelButton;
 
@@ -52,9 +49,6 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
 
         // Initialize EditTexts and Buttons
 
-        usernameEditText = v.findViewById(R.id.fragment_createAccount_editText_username);
-        passwordEditText = v.findViewById(R.id.fragment_createAccount_editText_password);
-
         createButton = v.findViewById(R.id.fragment_createAccount_button_create);
         createButton.setOnClickListener(this);
 
@@ -68,18 +62,28 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fragment_createAccount_button_create:
-                //Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_debug_create, Toast.LENGTH_SHORT).show(); // DEBUG
-
-                String username = this.getEditTextValue(usernameEditText);
-                String password = this.getEditTextValue(passwordEditText);
-
-                try{
-                    User.getInstance().createAccount(username, password);
-                    //TODO: verify this is correct way to do this
-                    getActivity().getSupportFragmentManager().popBackStackImmediate();
-                }catch(Exception e){
-                    Toast.makeText(this.getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                if(((EditText) this.getView().findViewById(R.id.fragment_createAccount_editText_password)).getText().toString().equals(
+                        ((EditText) this.getView().findViewById(R.id.fragment_createAccount_editText_repeatPassword)).getText().toString())){
+                    try{
+                        User.getInstance().createAccount(((EditText) this.getView().findViewById(R.id.fragment_createAccount_editText_email)).getText().toString(), ((EditText) this.getView().findViewById(R.id.fragment_createAccount_editText_password)).getText().toString());
+                        try{
+                            if(((EditText) this.getView().findViewById(R.id.fragment_createAccount_editText_username)).getText().toString()!=null&&
+                                    !((EditText) this.getView().findViewById(R.id.fragment_createAccount_editText_username)).getText().toString().isEmpty()) {
+                                User.getInstance().changeDisplayName(((EditText) this.getView().findViewById(R.id.fragment_createAccount_editText_username)).getText().toString());
+                            }
+                        } catch(Exception e){
+                            Toast.makeText(this.getContext(), R.string.s_fragment_createAccount_errorMessage_usernameNotSet, Toast.LENGTH_SHORT).show();
+                        }
+                        //TODO: verify this is correct way to do this
+                        getActivity().getSupportFragmentManager().popBackStackImmediate();
+                    } catch(Exception e){
+                        Toast.makeText(this.getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 }
+                else {
+                    Toast.makeText(v.getContext(), R.string.s_fragment_createAccount_errorMessage_PasswordsNotMatching, Toast.LENGTH_SHORT).show();
+                }
+
 
                 break;
             case R.id.fragment_createAccount_button_cancel:
