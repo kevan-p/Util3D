@@ -21,11 +21,15 @@
     <string name="s_fragment_createAccount_editText_hint_username">Username</string>
     <string name="s_fragment_createAccount_editText_hint_email">Email</string>
     <string name="s_fragment_createAccount_editText_hint_password">Password</string>
+    <string name="s_fragment_createAccount_editText_hint_repeatPassword">Repeat Password</string>
     <string name="s_fragment_createAccount_editText_hint_securityQuestion">Security Question</string>
     <string name="s_fragment_createAccount_editText_hint_securityAnswer">Security Answer</string>
     <string name="s_fragment_createAccount_button_clear">Clear</string>
     <string name="s_fragment_createAccount_button_create">Create</string>
     <string name="s_fragment_createAccount_button_cancel">Cancel</string>
+    <string name="s_fragment_createAccount_errorMessage_PasswordsNotMatching">Passwords do not match</string>
+    <string name="s_fragment_createAccount_errorMessage_usernameNotSet">Failed to set username. Try to change username in settings instead.</string>
+
     <!-- Error -->
     <string name="s_fragment_createAccount_errorMessage_fieldError">Field error!</string>
     <!-- Debug -->
